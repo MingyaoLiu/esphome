@@ -144,7 +144,7 @@ void WaveshareEPaper::data(uint8_t value) {
 bool WaveshareEPaper::wait_until_idle_() {
   if (this->busy_pin_ == nullptr) {
     delay(3000);
-    return false;
+    return true;
   }
 
   const uint32_t start = millis();
